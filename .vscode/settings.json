@@ -1,0 +1,10 @@
+{
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.terminal.activateEnvironment": false,
+    "python.terminal.activateEnvInCurrentTerminal": false,
+    "python.defaultInterpreterPath": "/workspace/.venv/python/bin/python"
+}

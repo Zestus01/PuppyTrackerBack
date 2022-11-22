@@ -1,0 +1,12 @@
+image:
+  file: .devcontainer/Dockerfile
+
+tasks:
+  - init: bash .devcontainer/onCreateCommand.sh
+    command: bash .devcontainer/postStartCommand.sh && bash && exit
+
+vscode:
+  extensions:
+    - ms-python.python
+    - cweijan.vscode-database-client2
+    - rangav.vscode-thunder-client
