@@ -13,5 +13,35 @@
         "min_weight_male": 8,
         "max_weight_male": 45
     }
+},
+{
+    "model": "database.breed",
+    "pk": 2,
+    "fields": {
+        "name": "Corgi",
+        "min_height_female": 5,
+        "max_height_female": 40,
+        "min_height_male": 8,
+        "max_height_male": 45,
+        "min_weight_female": 5,
+        "max_weight_female": 40,
+        "min_weight_male": 8,
+        "max_weight_male": 45
+    }
+},
+{
+    "model": "database.breed",
+    "pk": 3,
+    "fields": {
+        "name": "Husky",
+        "min_height_female": 5,
+        "max_height_female": 40,
+        "min_height_male": 8,
+        "max_height_male": 45,
+        "min_weight_female": 5,
+        "max_weight_female": 40,
+        "min_weight_male": 8,
+        "max_weight_male": 45
+    }
 }
 ]

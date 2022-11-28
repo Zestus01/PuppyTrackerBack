@@ -4,7 +4,23 @@
     "pk": 1,
     "fields": {
         "dog": 2,
+        "breed": 2
+    }
+},
+{
+    "model": "database.dogbreed",
+    "pk": 2,
+    "fields": {
+        "dog": 2,
         "breed": 1
+    }
+},
+{
+    "model": "database.dogbreed",
+    "pk": 3,
+    "fields": {
+        "dog": 3,
+        "breed": 3
     }
 }
 ]

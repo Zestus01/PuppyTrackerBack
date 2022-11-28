@@ -9,5 +9,16 @@
         "weight": 60,
         "height": 23
     }
+},
+{
+    "model": "database.dog",
+    "pk": 3,
+    "fields": {
+        "name": "Sebastian",
+        "age": 7,
+        "gender": "Male",
+        "weight": 40,
+        "height": 2
+    }
 }
 ]
