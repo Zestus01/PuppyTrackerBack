@@ -14,7 +14,7 @@ class DogUserSerializer(serializers.ModelSerializer):
 class OwnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = "__all__"
+        fields = ['id', 'username', 'first_name', 'last_name']
 
 class BreedSerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,9 +22,9 @@ class BreedSerializer(serializers.ModelSerializer):
         fields = ['id', 'name']
 
 class DogSerializer(serializers.ModelSerializer):
-    owner = OwnerSerializer()
+   ## owner = OwnerSerializer()
     breed = BreedSerializer(many=True)
     class Meta:
         model = Dog
-        fields = ['id', 'name', 'owner', 'gender', 'weight', 'height', 'breed']
+        fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
 

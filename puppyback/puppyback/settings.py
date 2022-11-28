@@ -32,13 +32,13 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.gitpod\.io$",
 ]
 
-CORS_ALLOWED_ORIGINS = [
-"https://domain.com",
-"https://api.domain.com",
-"http://localhost:8080",
-"http://127.0.0.1:9000"
-"https://8000-zestus01-realbackendbis-ss48wra6ug0.ws-us75.gitpod.io"
-]
+# CORS_ALLOWED_ORIGINS = [
+# "https://domain.com",
+# "https://api.domain.com",
+# "http://localhost:8080",
+# "http://127.0.0.1:9000"
+# "https://8000-zestus01-realbackendbis-ss48wra6ug0.ws-us75.gitpod.io"
+# ]
 
 AUTH_USER_MODEL = "database.CustomUser"
 
