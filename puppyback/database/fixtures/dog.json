@@ -1,0 +1,13 @@
+[
+{
+    "model": "database.dog",
+    "pk": 2,
+    "fields": {
+        "name": "Cricket",
+        "age": 13,
+        "gender": "Female",
+        "weight": 60,
+        "height": 23
+    }
+}
+]

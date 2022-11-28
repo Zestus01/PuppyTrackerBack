@@ -1,0 +1,19 @@
+https://docs.djangoproject.com/en/4.1/howto/initial-data/
+
+You’ll store this data in a fixtures directory inside your app.
+
+You can load data by calling manage.py loaddata <fixturename>, 
+where <fixturename> is the name of the fixture file you’ve created. 
+Each time you run loaddata, the data will be read from the fixture 
+and reloaded into the database. Note this means that if you change 
+one of the rows created by a fixture and then run loaddata again, 
+you’ll wipe out any changes you’ve made.
+
+python manage.py dumpdata songs.model_name --indent 4 > songs/fixtures/model_name.json
+Indents help for readability. 
+
+Load Data:
+python manage.py loaddata fixtures/model_name.json --app app.model_name
+python manage.py loaddata songs/fixtures/song.json -- app songs.song
+
+$ python manage.py loaddata songs/fixtures/*.json

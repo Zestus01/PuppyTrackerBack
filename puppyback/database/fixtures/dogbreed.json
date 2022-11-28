@@ -1,0 +1,10 @@
+[
+{
+    "model": "database.dogbreed",
+    "pk": 1,
+    "fields": {
+        "dog": 2,
+        "breed": 1
+    }
+}
+]

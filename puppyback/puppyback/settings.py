@@ -32,13 +32,13 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.gitpod\.io$",
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-# "https://domain.com",
-# "https://api.domain.com",
-# "http://localhost:8080",
-# "http://127.0.0.1:9000"
-# "https://8000-zestus01-realbackendbis-ss48wra6ug0.ws-us75.gitpod.io"
-# ]
+CORS_ALLOWED_ORIGINS = [
+"https://domain.com",
+"https://api.domain.com",
+"http://localhost:8000",
+"http://127.0.0.1:9000",
+"https://3000-zestus01-puppytrackerfr-c6wh4grvaaw.ws-us77.gitpod.io",
+]
 
 AUTH_USER_MODEL = "database.CustomUser"
 
@@ -57,16 +57,16 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'puppyback.urls'
 
