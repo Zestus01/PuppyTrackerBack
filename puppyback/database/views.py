@@ -1,10 +1,14 @@
 from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.http.response import Http404
 from rest_framework.views import APIView
+from rest_framework.decorators import action, api_view
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
+from rest_framework import status, permissions, viewsets
 from .models import *
 from .serializers import *
-from rest_framework.response import Response
-from rest_framework import status, permissions, viewsets
 
 class DogList(ModelViewSet):
     queryset = Dog.objects.all()

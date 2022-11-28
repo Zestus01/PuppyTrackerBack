@@ -4,15 +4,15 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Dog(models.Model):
-    MALE = 'M'
-    FEMALE = 'F'
+    MALE = 'Male'
+    FEMALE = 'Female'
     GENDER_CHOICES = [
         (MALE, 'Male'),
         (FEMALE, 'Female')
     ]
     name = models.CharField(max_length=200)
     age = models.SmallIntegerField(default=1, validators=[MinValueValidator(0)])
-    owner = models.ManyToManyField('CustomUser', through='DogUser', related_name='dog_user', blank=True)
+    owner = models.ManyToManyField('CustomUser', through='DogUser', related_name='dog_user')
     gender = models.CharField(max_length=12, choices=GENDER_CHOICES)
     weight = models.SmallIntegerField(default=40)
     height = models.SmallIntegerField(null=True, blank=True)
@@ -59,6 +59,7 @@ class DogUser(models.Model):
         return f"{self.dog}"
 
 class CustomUser(AbstractUser):
+    pass
 
     def __str__(self):
         return self.username

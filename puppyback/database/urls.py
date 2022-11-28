@@ -1,7 +1,11 @@
-from django.urls import path
-from database.views import *
+from django.urls import path, include
+from .views import *
+from rest_framework import routers
+
+router = routers.SimpleRouter()
+router.register(r'dog', DogList)
 
 urlpatterns = [
-    path('dog/', DogList.as_view()),
+    path('', include(router.urls)),
     path('dog/<int:dog_id>/', DogDetail.as_view())
 ]
