@@ -1,18 +1,34 @@
 [
 {
     "model": "database.doguser",
-    "pk": 1,
+    "pk": 4,
     "fields": {
-        "dog": 2,
+        "dog": 7,
+        "user": 2
+    }
+},
+{
+    "model": "database.doguser",
+    "pk": 5,
+    "fields": {
+        "dog": 3,
         "user": 1
     }
 },
 {
     "model": "database.doguser",
-    "pk": 2,
+    "pk": 8,
     "fields": {
-        "dog": 3,
+        "dog": 8,
         "user": 2
+    }
+},
+{
+    "model": "database.doguser",
+    "pk": 9,
+    "fields": {
+        "dog": 12,
+        "user": 3
     }
 }
 ]

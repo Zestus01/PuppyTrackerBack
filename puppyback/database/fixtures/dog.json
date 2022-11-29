@@ -1,17 +1,6 @@
 [
 {
     "model": "database.dog",
-    "pk": 2,
-    "fields": {
-        "name": "Cricket",
-        "age": 13,
-        "gender": "Female",
-        "weight": 60,
-        "height": 23
-    }
-},
-{
-    "model": "database.dog",
     "pk": 3,
     "fields": {
         "name": "Sebastian",
@@ -19,6 +8,61 @@
         "gender": "Male",
         "weight": 40,
         "height": 2
+    }
+},
+{
+    "model": "database.dog",
+    "pk": 7,
+    "fields": {
+        "name": "Melody",
+        "age": 1,
+        "gender": "Female",
+        "weight": 25,
+        "height": 10
+    }
+},
+{
+    "model": "database.dog",
+    "pk": 8,
+    "fields": {
+        "name": "Test",
+        "age": 1,
+        "gender": "Female",
+        "weight": 25,
+        "height": 10
+    }
+},
+{
+    "model": "database.dog",
+    "pk": 12,
+    "fields": {
+        "name": "Cricket",
+        "age": 14,
+        "gender": "Female",
+        "weight": 43,
+        "height": 5
+    }
+},
+{
+    "model": "database.dog",
+    "pk": 13,
+    "fields": {
+        "name": "Dipper",
+        "age": 1,
+        "gender": "Female",
+        "weight": 80,
+        "height": 23
+    }
+},
+{
+    "model": "database.dog",
+    "pk": 14,
+    "fields": {
+        "name": "Walter",
+        "age": 1,
+        "gender": "Female",
+        "weight": 60,
+        "height": 21
     }
 }
 ]

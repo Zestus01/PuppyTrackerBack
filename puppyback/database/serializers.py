@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Dog, DogBreed, DogUser, Breed, CustomUser
-from .fields import BreedListingField
+from .fields import BreedListingField, OwnerListingField
 
 class DogBreedSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,8 +31,8 @@ class DogSerializer(serializers.ModelSerializer):
 
 class DogTestSerializer(serializers.ModelSerializer):
     breed = BreedListingField(many=True, queryset=Breed.objects.all(), required=True)
-
+    owner = OwnerListingField(many=True, queryset=CustomUser.objects.all(), required=False)
     class Meta:
         model = Dog
-        fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
+        fields = ['id', 'name', 'gender', 'weight', 'height', 'breed', 'owner']
   

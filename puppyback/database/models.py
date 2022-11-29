@@ -45,9 +45,12 @@ class DogBreed(models.Model):
         unique_together = (
             ['dog', 'breed']
         )
+    
+    def __str__(self):
+        return f"{self.dog} => {self.breed}"
 
 class DogUser(models.Model):
-    dog = models.ForeignKey(Dog, on_delete=models.CASCADE)
+    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, unique=True)
     user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
 
     class Meta:
@@ -62,4 +65,4 @@ class CustomUser(AbstractUser):
     pass
 
     def __str__(self):
-        return self.username
+        return f"{self.username}: {self.first_name} {self.last_name}"
