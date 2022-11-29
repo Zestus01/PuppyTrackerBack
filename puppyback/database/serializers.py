@@ -29,11 +29,6 @@ class DogSerializer(serializers.ModelSerializer):
         model = Dog
         fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
 
-class DogIDSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Dog
-        fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
-
 class DogTestSerializer(serializers.ModelSerializer):
     breed = BreedListingField(many=True, queryset=Breed.objects.all(), required=True)
 
