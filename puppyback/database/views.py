@@ -10,6 +10,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework import status, permissions, viewsets
 from rest_framework.generics import ListAPIView
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import *
 from .serializers import *
 
@@ -91,3 +92,18 @@ class DogUserViewSet(ModelViewSet):
     def get_queryset(self):
         return CustomUser.objects.get(username=self.request.user.username)
 
+class ObtainTokenPairWithColorView(TokenObtainPairView):
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = MyTokenObtainPairSerializer
+
+class CustomUserCreate(APIView):
+    permission_classes = (permissions.AllowAny,)
+
+    def post(self, request, format='json'):
+        serializer = CustomUserSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            if user:
+                json = serializer.data
+                return Response(json, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)    
