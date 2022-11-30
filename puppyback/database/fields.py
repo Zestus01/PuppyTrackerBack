@@ -10,7 +10,7 @@ class BreedListingField(serializers.RelatedField):
 
 class OwnerListingField(serializers.RelatedField):
     def to_representation(self, instance):
-        return f"{instance.id}"
+        return f"{instance.id}: {instance.username} {instance.first_name} {instance.last_name}"
     
     def to_internal_value(self, data):
         return CustomUser.objects.get(username=data)

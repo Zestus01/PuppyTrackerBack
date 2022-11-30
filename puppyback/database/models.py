@@ -50,7 +50,7 @@ class DogBreed(models.Model):
         return f"{self.dog} => {self.breed}"
 
 class DogUser(models.Model):
-    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, unique=True)
+    dog = models.OneToOneField(Dog, on_delete=models.CASCADE)
     user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
 
     class Meta:

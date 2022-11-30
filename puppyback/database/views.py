@@ -8,6 +8,8 @@ from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import status, permissions, viewsets
+from rest_framework.generics import ListAPIView
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import *
 from .serializers import *
 
@@ -44,17 +46,19 @@ class DogDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class DogTestViewSet(ModelViewSet):
+class DogViewSet(ModelViewSet):
     queryset = Dog.objects.all()
-    serializer_class = DogTestSerializer
+    serializer_class = DogBestSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['owner__id', 'owner__username']
 
 class UserViewSet(ModelViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = OwnerSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
 
-class DogUserDetalView(APIView):
+class DogUserDetailView(APIView):
 
     def get_object(self, pk):
         try:
@@ -79,4 +83,11 @@ class DogUserDetalView(APIView):
         dog = self.get_object(pk)
         dog.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class DogUserViewSet(ModelViewSet):
+    serializer_class = CustomUserSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
+
+    def get_queryset(self):
+        return CustomUser.objects.get(username=self.request.user.username)
 
