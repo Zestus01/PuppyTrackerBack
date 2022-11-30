@@ -8,11 +8,11 @@ router.register(r'dog', DogViewSet)
 router.register(r'user', UserViewSet)
 
 urlpatterns = [
+    path('user/create/', CustomUserCreate.as_view()),
     path('', include(router.urls)),
     path('dog/<int:dog_id>/', DogDetail.as_view()),
     path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-    path('user/create/', CustomUserCreate.as_view(), name="create_user"),
 
 
 ]
