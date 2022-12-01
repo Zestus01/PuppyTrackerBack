@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Dog, DogBreed, DogUser, Breed, CustomUser
-from .fields import BreedListingField, OwnerListingField
+from .models import Dog, DogBreed, DogUser, Breed, CustomUser, Activity, ActivityList
+from .fields import BreedListingField, OwnerListingField, ActivityListingField, DogListingField
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class DogBreedSerializer(serializers.ModelSerializer):
@@ -36,15 +36,12 @@ class CustomUserSerializer(serializers.ModelSerializer):
     """
     Currently unused in preference of the below.
     """
-    email = serializers.EmailField(
-        required=True
-    )
     username = serializers.CharField()
     password = serializers.CharField(min_length=4, write_only=True)
     
     class Meta:
         model = CustomUser
-        fields = ['email', 'username', 'password', 'first_name', 'last_name']
+        fields = ['username', 'password', 'first_name', 'last_name']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -65,3 +62,14 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['username'] = user.username
         return token
 
+class ActivityListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ActivityList
+        fields = ['id', 'name', 'amount']
+
+class ActivitySerializer(serializers.ModelSerializer):
+    dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
+    activities = ActivityListingField(many=True, queryset=ActivityList.objects.all(), required=True)
+    class Meta:
+        model = Activity
+        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']

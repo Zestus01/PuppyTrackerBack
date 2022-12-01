@@ -14,8 +14,8 @@ class Dog(models.Model):
     age = models.SmallIntegerField(default=1, validators=[MinValueValidator(0)])
     owner = models.ManyToManyField('CustomUser', through='DogUser', related_name='dog_user')
     gender = models.CharField(max_length=12, choices=GENDER_CHOICES)
-    weight = models.DecimalField(default=5, max_digits=5, decimal_places=2)
-    height = models.DecimalField(default=23, max_digits=5, decimal_places=2, blank=True)
+    weight = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    height = models.DecimalField(default=23, max_digits=5, decimal_places=2, blank=True, validators=[MinValueValidator(0)])
     breed = models.ManyToManyField('Breed', through='DogBreed', related_name='dog_breed')
 
     def __str__(self):
@@ -24,15 +24,15 @@ class Dog(models.Model):
 class Breed(models.Model):
     name = models.CharField(max_length=200)
 
-    min_height_female = models.DecimalField(default=5, max_digits=5, decimal_places=2)
-    max_height_female = models.DecimalField(default=25, max_digits=5, decimal_places=2)
-    min_height_male = models.DecimalField(default=5, max_digits=5, decimal_places=2)
-    max_height_male = models.DecimalField(default=25, max_digits=5, decimal_places=2)
+    min_height_female = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    max_height_female = models.DecimalField(default=25, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    min_height_male = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    max_height_male = models.DecimalField(default=25, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
     
-    min_weight_female = models.DecimalField(default=5, max_digits=5, decimal_places=2)
-    max_weight_female = models.DecimalField(default=55, max_digits=5, decimal_places=2)
-    min_weight_male = models.DecimalField(default=5, max_digits=5, decimal_places=2)
-    max_weight_male = models.DecimalField(default=55, max_digits=5, decimal_places=2)
+    min_weight_female = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    max_weight_female = models.DecimalField(default=55, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    min_weight_male = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    max_weight_male = models.DecimalField(default=55, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
 
     def __str__(self):
         return self.name
@@ -79,3 +79,20 @@ class CustomUser(AbstractUser):
     
     def __str__(self):
         return f"{self.username}: {self.first_name} {self.last_name}"
+
+class ActivityList(models.Model):
+    name = models.CharField(max_length=40)
+    dimension = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f"{self.name}: {self.dimension}"
+
+class Activity(models.Model):
+    dog = models.ForeignKey(Dog, on_delete=models.CASCADE)
+    activities = models.ForeignKey(ActivityList, on_delete=models.PROTECT)
+    amount = models.TextField(max_length=15 ,blank=False)
+    description = models.TextField(max_length=300)
+    time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.dog} did {self.activities} {self.amount} at {self.time}"

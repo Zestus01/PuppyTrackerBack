@@ -14,3 +14,17 @@ class OwnerListingField(serializers.RelatedField):
     
     def to_internal_value(self, data):
         return CustomUser.objects.get(username=data)
+
+class DogListingField(serializers.RelatedField):
+    def to_representation(self, instance):
+        return instance.name
+
+    def to_internal_value(self, data):
+        return Dog.objects.get(name=data)    
+
+class ActivityListingField(serializers.RelatedField):
+    def to_representation(self, instance):
+        return instance.name
+
+    def to_internal_value(self, data):
+        return ActivityList.objects.get(name=data)    

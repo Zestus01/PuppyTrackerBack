@@ -45,6 +45,16 @@ class DogDetail(APIView):
         dog.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+class ActivityViewSet(ModelViewSet):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['activitylist_id', 'activitylist_name']
+
+class ActivityListViewSet(ModelViewSet):
+    queryset = ActivityList.objects.all()
+    serializer_class = ActivityListSerializer
 
 class DogViewSet(ModelViewSet):
     queryset = Dog.objects.all()

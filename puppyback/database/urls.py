@@ -13,6 +13,7 @@ urlpatterns = [
     path('dog/<int:dog_id>/', DogDetail.as_view()),
     path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+    
 
 
 ]
