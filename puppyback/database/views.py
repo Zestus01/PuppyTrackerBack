@@ -13,13 +13,9 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import *
 from .serializers import *
 
-class DogList(ModelViewSet):
-    queryset = Dog.objects.all()
-    serializer_class = DogSerializer
-
 class DogDetail(APIView):
     """
-    Retrieve, update or delete a artist instance.
+    Retrieve, update or delete a Dog instance.
     """
     def get_object(self, pk):
         try:
@@ -45,16 +41,19 @@ class DogDetail(APIView):
         dog.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+## Can also use the dog's name and activity name 
+## ?dog__id=7&activities__id=3 Gets the activities for dog 7 and activity 3
 class ActivityViewSet(ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
     http_method_names = ['get', 'post', 'put', 'delete']
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['activitylist_id', 'activitylist_name']
+    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
 
 class ActivityListViewSet(ModelViewSet):
     queryset = ActivityList.objects.all()
     serializer_class = ActivityListSerializer
+    permission_classes = (permissions.AllowAny,)
 
 class DogViewSet(ModelViewSet):
     queryset = Dog.objects.all()
@@ -109,3 +108,31 @@ class CustomUserCreate(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer
     permission_classes = (permissions.AllowAny,)
+
+class ActivityDetail(APIView):
+    """
+    Retrieve, update or delete an Activity instance.
+    """
+    def get_object(self, pk):
+        try:
+            return activity.objects.get(pk=pk)
+        except activity.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        activity = self.get_object(pk)
+        serializer = ActivitySerializer(activity)
+        return Response(serializer.data)
+    
+    def put(self, request, pk, format=None):
+        activity = self.get_object(pk)
+        serializer = ActivitySerializer(activity, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def delete(self, request, pk, format=None):
+        activity = self.get_object(pk)
+        activity.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

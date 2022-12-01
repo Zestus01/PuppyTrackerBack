@@ -18,12 +18,12 @@ class BreedSerializer(serializers.ModelSerializer):
         model = Breed
         fields = ['id', 'name']
 
-class DogSerializer(serializers.ModelSerializer):
+class DogSmallSerializer(serializers.ModelSerializer):
    ## owner = OwnerSerializer()
-    breed = BreedSerializer(many=True)
+    # breed = BreedSerializer(many=True)
     class Meta:
         model = Dog
-        fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
+        fields = ['id', 'name']
 
 class DogBestSerializer(serializers.ModelSerializer):
     breed = BreedListingField(many=True, queryset=Breed.objects.all(), required=True)
@@ -65,11 +65,9 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class ActivityListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ActivityList
-        fields = ['id', 'name', 'amount']
+        fields = ['id', 'name', 'dimension']
 
 class ActivitySerializer(serializers.ModelSerializer):
-    dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
-    activities = ActivityListingField(many=True, queryset=ActivityList.objects.all(), required=True)
     class Meta:
         model = Activity
         fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']

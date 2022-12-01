@@ -81,17 +81,17 @@ class CustomUser(AbstractUser):
         return f"{self.username}: {self.first_name} {self.last_name}"
 
 class ActivityList(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=40, unique=True)
     dimension = models.CharField(max_length=20)
 
     def __str__(self):
         return f"{self.name}: {self.dimension}"
 
 class Activity(models.Model):
-    dog = models.ForeignKey(Dog, on_delete=models.CASCADE)
-    activities = models.ForeignKey(ActivityList, on_delete=models.PROTECT)
+    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, related_name="activity")
+    activities = models.ForeignKey(ActivityList, on_delete=models.PROTECT, related_name="activity")
     amount = models.TextField(max_length=15 ,blank=False)
-    description = models.TextField(max_length=300)
+    description = models.TextField(max_length=300, blank=True)
     time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
