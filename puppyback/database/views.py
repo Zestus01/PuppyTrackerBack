@@ -50,6 +50,13 @@ class ActivityViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
 
+class ActivityIDViewSet(ModelViewSet):
+    queryset = Activity.objects.all()
+    serializer_class = ActivityIDSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']    
+
 class ActivityListViewSet(ModelViewSet):
     queryset = ActivityList.objects.all()
     serializer_class = ActivityListSerializer

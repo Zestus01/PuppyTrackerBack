@@ -22,7 +22,7 @@ class DogListingField(serializers.RelatedField):
     def to_internal_value(self, data):
         return Dog.objects.get(name=data)    
 
-class ActivityListingField(serializers.RelatedField):
+class ActivityListListingField(serializers.RelatedField):
     def to_representation(self, instance):
         return instance.name
 

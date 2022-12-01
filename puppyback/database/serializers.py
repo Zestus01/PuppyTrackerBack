@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Dog, DogBreed, DogUser, Breed, CustomUser, Activity, ActivityList
-from .fields import BreedListingField, OwnerListingField, ActivityListingField, DogListingField
+from .fields import BreedListingField, OwnerListingField, ActivityListListingField, DogListingField
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class DogBreedSerializer(serializers.ModelSerializer):
@@ -66,6 +66,14 @@ class ActivityListSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'dimension']
 
 class ActivitySerializer(serializers.ModelSerializer):
+    dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
+    activities = ActivityListListingField(many=False, queryset=ActivityList.objects.all(), required=False)
     class Meta:
         model = Activity
         fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']
+
+class ActivityIDSerializer(serializers.ModelSerializer):
+    activities = ActivityListListingField(many=False, queryset=ActivityList.objects.all(), required=False)
+    class Meta:
+        model = Activity
+        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']        

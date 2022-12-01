@@ -88,8 +88,8 @@ class ActivityList(models.Model):
         return f"{self.name}: {self.dimension}"
 
 class Activity(models.Model):
-    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, related_name="activity")
-    activities = models.ForeignKey(ActivityList, on_delete=models.PROTECT, related_name="activity")
+    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, related_name="activity_dog")
+    activities = models.ForeignKey(ActivityList, on_delete=models.PROTECT, related_name="activity_activityaist")
     amount = models.TextField(max_length=15 ,blank=False)
     description = models.TextField(max_length=300, blank=True)
     time = models.DateTimeField(auto_now_add=True)
