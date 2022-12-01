@@ -18,12 +18,10 @@ class BreedSerializer(serializers.ModelSerializer):
         model = Breed
         fields = ['id', 'name']
 
-class DogSmallSerializer(serializers.ModelSerializer):
-   ## owner = OwnerSerializer()
-    # breed = BreedSerializer(many=True)
+class DogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dog
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
 
 class DogBestSerializer(serializers.ModelSerializer):
     breed = BreedListingField(many=True, queryset=Breed.objects.all(), required=True)

@@ -12,8 +12,8 @@ router.register(r'list', ActivityListViewSet)
 urlpatterns = [
     path('user/create/', CustomUserCreate.as_view()),
     path('', include(router.urls)),
-    path('dog/<int:dog_id>/', DogDetail.as_view()),
+    path('edit/dog/<int:pk>/', DogDetail.as_view()),
     path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-    path('edit/activity/<int:activity_id>', ActivityDetail.as_view())
+    path('edit/activity/<int:pk>/', ActivityDetail.as_view())
 ]

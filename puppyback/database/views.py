@@ -20,7 +20,7 @@ class DogDetail(APIView):
     def get_object(self, pk):
         try:
             return Dog.objects.get(pk=pk)
-        except dog.DoesNotExist:
+        except Dog.DoesNotExist:
             raise Http404
 
     def get(self, request, pk, format=None):
@@ -67,38 +67,6 @@ class UserViewSet(ModelViewSet):
     serializer_class = OwnerSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
 
-class DogUserDetailView(APIView):
-
-    def get_object(self, pk):
-        try:
-            return Dog.objects.get(owner=pk)
-        except dog.DoesNotExist:
-            raise Http404
-
-    def get(self, request, pk, format=None):
-        dog = self.get_object(pk)
-        serializer = DogSerializer(dog)
-        return Response(serializer.data)
-    
-    def put(self, request, pk, format=None):
-        dog = self.get_object(pk)
-        serializer = DogSerializer(dog, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-    def delete(self, request, pk, format=None):
-        dog = self.get_object(pk)
-        dog.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-
-class DogUserViewSet(ModelViewSet):
-    serializer_class = CustomUserSerializer
-    http_method_names = ['get', 'post', 'put', 'delete']
-
-    def get_queryset(self):
-        return CustomUser.objects.get(username=self.request.user.username)
 
 class ObtainTokenPairWithColorView(TokenObtainPairView):
     permission_classes = (permissions.AllowAny,)
@@ -115,8 +83,8 @@ class ActivityDetail(APIView):
     """
     def get_object(self, pk):
         try:
-            return activity.objects.get(pk=pk)
-        except activity.DoesNotExist:
+            return Activity.objects.get(pk=pk)
+        except Activity.DoesNotExist:
             raise Http404
 
     def get(self, request, pk, format=None):
