@@ -63,7 +63,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class ActivityListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ActivityList
-        fields = ['id', 'name', 'dimension']
+        fields = ['id', 'name', 'dimension', 'verb']
 
 class ActivitySerializer(serializers.ModelSerializer):
     dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
@@ -77,3 +77,10 @@ class ActivityIDSerializer(serializers.ModelSerializer):
     class Meta:
         model = Activity
         fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']        
+
+class ActivityNestedSerializer(serializers.ModelSerializer):
+    activities = ActivityListSerializer(many=False)
+    dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
+    class Meta:
+        model = Activity
+        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time'] 

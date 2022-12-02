@@ -83,6 +83,7 @@ class CustomUser(AbstractUser):
 class ActivityList(models.Model):
     name = models.CharField(max_length=40, unique=True)
     dimension = models.CharField(max_length=20)
+    verb = models.CharField(max_length=20, null=True);
 
     def __str__(self):
         return f"{self.name}: {self.dimension}"
@@ -96,3 +97,6 @@ class Activity(models.Model):
 
     def __str__(self):
         return f"{self.dog} did {self.activities} {self.amount} at {self.time}"
+    
+    class Meta: 
+        ordering = ['-time']

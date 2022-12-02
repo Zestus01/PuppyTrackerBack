@@ -49,6 +49,7 @@ class ActivityViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
+    ordering_fields = ['time']
 
 class ActivityIDViewSet(ModelViewSet):
     queryset = Activity.objects.all()
@@ -74,6 +75,11 @@ class UserViewSet(ModelViewSet):
     serializer_class = OwnerSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
 
+class ActivityNestedViewSet(ModelViewSet):
+    queryset = Activity.objects.all()
+    serializer_class = ActivityNestedSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']   
 
 class ObtainTokenPairWithColorView(TokenObtainPairView):
     permission_classes = (permissions.AllowAny,)
