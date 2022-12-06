@@ -13,7 +13,7 @@ class OwnerListingField(serializers.RelatedField):
         return f"{instance.id}: {instance.username} {instance.first_name} {instance.last_name}"
     
     def to_internal_value(self, data):
-        return CustomUser.objects.get(username=data)
+        return CustomUser.objects.get(id=data)
 
 class DogListingField(serializers.RelatedField):
     def to_representation(self, instance):
