@@ -50,13 +50,15 @@ class ActivityViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
     ordering_fields = ['time']
+    permission_classes = (permissions.IsAuthenticated,)
 
 class ActivityIDViewSet(ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivityIDSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']    
+    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
+    permission_classes = (permissions.IsAuthenticated,)    
 
 class ActivityListViewSet(ModelViewSet):
     queryset = ActivityList.objects.all()
@@ -69,6 +71,7 @@ class DogViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['owner__id', 'owner__username']
+    permission_classes = (permissions.IsAuthenticated,)
 
 class UserViewSet(ModelViewSet):
     queryset = CustomUser.objects.all()
@@ -79,7 +82,8 @@ class ActivityNestedViewSet(ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivityNestedSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
-    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']   
+    filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
+    permission_classes = (permissions.IsAuthenticated,)   
 
 class ObtainTokenPairWithColorView(TokenObtainPairView):
     permission_classes = (permissions.AllowAny,)
@@ -117,3 +121,5 @@ class ActivityDetail(APIView):
         activity = self.get_object(pk)
         activity.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    permission_classes = (permissions.IsAuthenticated,)
