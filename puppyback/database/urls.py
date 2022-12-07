@@ -10,6 +10,8 @@ router.register(r'activity', ActivityViewSet)
 router.register(r'list', ActivityListViewSet)
 router.register(r'create', ActivityIDViewSet)
 router.register(r'nested', ActivityNestedViewSet)
+router.register(r'weight', WeightChangeViewSet)
+router.register(r'height', HeightChangeViewSet)
 
 urlpatterns = [
     path('user/create/', CustomUserCreate.as_view()),

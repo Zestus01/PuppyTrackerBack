@@ -123,3 +123,18 @@ class ActivityDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     permission_classes = (permissions.IsAuthenticated,)
+
+class WeightChangeViewSet(ModelViewSet):
+    queryset = WeightChange.objects.all()
+    serializer_class = WeightChangeSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filterset_fields = ['dog__id',]
+    permission_classes = (permissions.IsAuthenticated,) 
+
+
+class HeightChangeViewSet(ModelViewSet):
+    queryset = HeightChange.objects.all()
+    serializer_class = HeightChangeSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filterset_fields = ['dog__id',]
+    permission_classes = (permissions.IsAuthenticated,)

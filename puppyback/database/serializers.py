@@ -83,4 +83,16 @@ class ActivityNestedSerializer(serializers.ModelSerializer):
     dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
     class Meta:
         model = Activity
-        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time'] 
+        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']
+
+class WeightChangeSerializer(serializers.ModelSerializer):
+    dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
+    class Meta:
+        model = Dog
+        fields = ['id', 'dog', 'time', 'weight']
+
+class HeightChangeSerializer(serializers.ModelSerializer):
+    dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
+    class Meta:
+        model = Dog
+        fields = ['id', 'dog', 'time', 'height']

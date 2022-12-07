@@ -130,6 +130,97 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-12-06T15:04:48.547Z",
+        "user": 4,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Corgi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-12-06T18:10:27.822Z",
+        "user": 4,
+        "content_type": 11,
+        "object_id": "5",
+        "object_repr": "Lets (Male) owner is database.CustomUser.None",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-12-06T18:10:27.824Z",
+        "user": 4,
+        "content_type": 11,
+        "object_id": "4",
+        "object_repr": "Lets (Male) owner is database.CustomUser.None",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-12-07T00:44:12.911Z",
+        "user": 4,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Testing (Male) owner is database.CustomUser.None",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-12-07T00:44:12.913Z",
+        "user": 4,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Sebastian (Male) owner is database.CustomUser.None",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-12-07T00:48:44.567Z",
+        "user": 4,
+        "content_type": 14,
+        "object_id": "6",
+        "object_repr": "Playtime: minutes",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-12-07T00:48:52.925Z",
+        "user": 4,
+        "content_type": 14,
+        "object_id": "6",
+        "object_repr": "Playtime: Minutes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\"]}}]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -670,6 +761,78 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add weight change",
+        "content_type": 16,
+        "codename": "add_weightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change weight change",
+        "content_type": 16,
+        "codename": "change_weightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete weight change",
+        "content_type": 16,
+        "codename": "delete_weightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view weight change",
+        "content_type": 16,
+        "codename": "view_weightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add height change",
+        "content_type": 17,
+        "codename": "add_heightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change height change",
+        "content_type": 17,
+        "codename": "change_heightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete height change",
+        "content_type": 17,
+        "codename": "delete_heightchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view height change",
+        "content_type": 17,
+        "codename": "view_heightchange"
+    }
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": {
@@ -790,6 +953,22 @@
     }
 },
 {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "database",
+        "model": "weightchange"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "database",
+        "model": "heightchange"
+    }
+},
+{
     "model": "sessions.session",
     "pk": "df491leto76o9pgwl404xbdr5pnp5z9i",
     "fields": {
@@ -809,21 +988,25 @@
     }
 },
 {
-    "model": "database.dog",
-    "pk": 2,
-    "fields": {
-        "name": "Sebastian",
-        "age": 1,
-        "gender": "Male",
-        "weight": "40.00",
-        "height": "30.00"
-    }
-},
-{
     "model": "database.breed",
     "pk": 1,
     "fields": {
         "name": "Labrador",
+        "min_height_female": "5.00",
+        "max_height_female": "25.00",
+        "min_height_male": "5.00",
+        "max_height_male": "25.00",
+        "min_weight_female": "5.00",
+        "max_weight_female": "55.00",
+        "min_weight_male": "5.00",
+        "max_weight_male": "55.00"
+    }
+},
+{
+    "model": "database.breed",
+    "pk": 3,
+    "fields": {
+        "name": "Corgi",
         "min_height_female": "5.00",
         "max_height_female": "25.00",
         "min_height_male": "5.00",
@@ -843,26 +1026,10 @@
     }
 },
 {
-    "model": "database.dogbreed",
-    "pk": 2,
-    "fields": {
-        "dog": 2,
-        "breed": 1
-    }
-},
-{
     "model": "database.doguser",
     "pk": 1,
     "fields": {
         "dog": 1,
-        "user": 4
-    }
-},
-{
-    "model": "database.doguser",
-    "pk": 2,
-    "fields": {
-        "dog": 2,
         "user": 4
     }
 },
@@ -921,6 +1088,60 @@
     }
 },
 {
+    "model": "database.customuser",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$8aHzNu7wb7Nv2wTZLZI8s8$gIVTbM0mJJGKcQAvYwaeWzeocwD/s8TT9QmTERuMKWc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "testing2131",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-12-06T02:54:34.066Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "database.customuser",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$MxGA0tEhAntxGA7QiXY5RD$HUpFZ6dKQH8k9nFOwxHi98Sl6WVfBMAjIxJbdiDLQfU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tester231",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-12-06T02:55:02.993Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "database.customuser",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$0keMF38NdSc1GVxoHrcnbW$8mjRHXNyW5UdFDIvo21+Y5fEBwLfSzHMxdSGsNWYz+Y=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "zestus",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-12-07T01:02:28.899Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "database.activitylist",
     "pk": 1,
     "fields": {
@@ -935,7 +1156,7 @@
     "fields": {
         "name": "Pee",
         "dimension": "Size",
-        "verb": "Large"
+        "verb": "Relieved"
     }
 },
 {
@@ -943,15 +1164,6 @@
     "pk": 3,
     "fields": {
         "name": "Poop",
-        "dimension": "Size",
-        "verb": "Relieved"
-    }
-},
-{
-    "model": "database.activitylist",
-    "pk": 4,
-    "fields": {
-        "name": "Poop and pee",
         "dimension": "Size",
         "verb": "Relieved"
     }
@@ -970,8 +1182,8 @@
     "pk": 6,
     "fields": {
         "name": "Playtime",
-        "dimension": "minutes",
-        "verb": "played"
+        "dimension": "Minutes",
+        "verb": "Played"
     }
 },
 {
@@ -1005,6 +1217,127 @@
         "amount": "Large",
         "description": "Took 25 minutes to go",
         "time": "2022-12-03T18:21:20.426Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 9,
+    "fields": {
+        "dog": 1,
+        "activities": 5,
+        "amount": "20",
+        "description": "Whole block",
+        "time": "2022-12-07T00:44:58.737Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 10,
+    "fields": {
+        "dog": 1,
+        "activities": 5,
+        "amount": "5",
+        "description": "Short one",
+        "time": "2022-12-07T00:45:07.103Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 11,
+    "fields": {
+        "dog": 1,
+        "activities": 1,
+        "amount": "50",
+        "description": "Two steaks",
+        "time": "2022-12-07T00:45:25.745Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 12,
+    "fields": {
+        "dog": 1,
+        "activities": 1,
+        "amount": "9",
+        "description": "two bowls",
+        "time": "2022-12-07T00:45:37.200Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 13,
+    "fields": {
+        "dog": 1,
+        "activities": 2,
+        "amount": "Sizeable",
+        "description": "stream",
+        "time": "2022-12-07T00:45:46.871Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 14,
+    "fields": {
+        "dog": 1,
+        "activities": 3,
+        "amount": "Massive",
+        "description": "Dump",
+        "time": "2022-12-07T00:45:57.619Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 15,
+    "fields": {
+        "dog": 1,
+        "activities": 2,
+        "amount": "Massive",
+        "description": "Dump",
+        "time": "2022-12-07T00:45:57.619Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 16,
+    "fields": {
+        "dog": 1,
+        "activities": 6,
+        "amount": "18 minutes",
+        "description": "Whole bowl",
+        "time": "2022-12-07T00:46:25.044Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 17,
+    "fields": {
+        "dog": 1,
+        "activities": 6,
+        "amount": "10",
+        "description": "Getting new timestamp",
+        "time": "2022-12-07T01:56:33.886Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 18,
+    "fields": {
+        "dog": 1,
+        "activities": 5,
+        "amount": "50",
+        "description": "I need another time stamp",
+        "time": "2022-12-07T02:20:30.677Z"
+    }
+},
+{
+    "model": "database.activity",
+    "pk": 19,
+    "fields": {
+        "dog": 1,
+        "activities": 1,
+        "amount": "6",
+        "description": "New Timestamp",
+        "time": "2022-12-07T02:48:53.559Z"
     }
 }
 ]
