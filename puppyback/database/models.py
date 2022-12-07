@@ -19,7 +19,7 @@ class Dog(models.Model):
     breed = models.ManyToManyField('Breed', through='DogBreed', related_name='dog_breed')
 
     def __str__(self):
-        return f"{self.name} ({self.gender}) owner is {self.owner}"
+        return f"{self.name} ({self.gender})"
 
 class Breed(models.Model):
     name = models.CharField(max_length=200)
@@ -99,4 +99,26 @@ class Activity(models.Model):
         return f"{self.dog} did {self.activities} {self.amount} at {self.time}"
     
     class Meta: 
+        ordering = ['-time']
+
+class WeightChange(models.Model):
+    weight = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])       
+    time = models.DateTimeField(auto_now_add=True)
+    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, related_name="weight_dog")
+
+    def __str__(self):
+        return f"{self.dog} {self.weight} at {self.time}"
+
+    class Meta:
+        ordering = ['-time']
+
+class HeightChange(models.Model):
+    height = models.DecimalField(default=23, max_digits=5, decimal_places=2, blank=True, validators=[MinValueValidator(0)])
+    time = models.DateTimeField(auto_now_add=True)
+    dog = models.ForeignKey(Dog, on_delete=models.CASCADE, related_name="height_dog")
+
+    def __str__(self):
+        return f"{self.dog} {self.height} at {self.time}"
+
+    class Meta:
         ordering = ['-time']
