@@ -75,5 +75,23 @@
             20
         ]
     }
+},
+{
+    "model": "database.customuser",
+    "pk": 3,
+    "fields": {
+        "password": "zestus",
+        "last_login": "2022-11-29T17:59:38Z",
+        "is_superuser": false,
+        "username": "Sest",
+        "first_name": "Seth",
+        "last_name": "Clown",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-11-29T17:59:31Z",
+        "groups": [],
+        "user_permissions": []
+    }
 }
 ]
