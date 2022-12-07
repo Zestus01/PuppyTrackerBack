@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Dog, DogBreed, DogUser, Breed, CustomUser, Activity, ActivityList
+from .models import Dog, DogBreed, DogUser, Breed, CustomUser, Activity, ActivityList, HeightChange, WeightChange
 from .fields import BreedListingField, OwnerListingField, ActivityListListingField, DogListingField
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
@@ -86,13 +86,13 @@ class ActivityNestedSerializer(serializers.ModelSerializer):
         fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']
 
 class WeightChangeSerializer(serializers.ModelSerializer):
-    dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
+    dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
     class Meta:
-        model = Dog
-        fields = ['id', 'dog', 'time', 'weight']
+        model = WeightChange
+        fields = ['id', 'weight', 'time', 'dog',]
 
 class HeightChangeSerializer(serializers.ModelSerializer):
     dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
     class Meta:
-        model = Dog
-        fields = ['id', 'dog', 'time', 'height']
+        model = HeightChange
+        fields = ['id', 'height', 'time', 'dog',]
