@@ -12,6 +12,8 @@ router.register(r'create', ActivityIDViewSet)  ## Create ativities, uses ID
 router.register(r'nested', ActivityNestedViewSet)  ## Nested serializers
 router.register(r'weight', WeightChangeViewSet)  ## For weight change
 router.register(r'height', HeightChangeViewSet)  ## For height change
+router.register(r'weightarray', WeightArrayViewSet)
+router.register(r'heightarray', HeightArrayViewSet)
 
 urlpatterns = [
     path('user/create/', CustomUserCreate.as_view()),  ## For creating users

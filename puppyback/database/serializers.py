@@ -96,3 +96,35 @@ class HeightChangeSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeightChange
         fields = ['id', 'height', 'time', 'dog',]
+
+class WeightArraySerializers(serializers.ModelSerializer):
+    weight = serializers.SerializerMethodField()
+
+    class Meta:
+        model = WeightChange
+        fields = ['weight']
+
+    def get_weight(self, object):
+        dogWeights = WeightChange.objects.filter(dog=object.id);
+        weightArray = []
+
+        for item in dogWeights:
+            weightArray.append(item.weight)
+        
+        return weightArray
+
+class HeightArraySerializers(serializers.ModelSerializer):
+    weight = serializers.SerializerMethodField()
+
+    class Meta:
+        model = HeightChange
+        fields = ['height']
+
+    def get_height(self, object):
+        dogHeights = HeightChange.objects.filter(dog=object.id);
+        heightArray = []
+
+        for item in dogHeights:
+            heightArray.append(item.weight)
+        
+        return heightArray
