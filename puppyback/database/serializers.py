@@ -114,7 +114,7 @@ class WeightArraySerializers(serializers.ModelSerializer):
         return weightArray
 
 class HeightArraySerializers(serializers.ModelSerializer):
-    weight = serializers.SerializerMethodField()
+    height = serializers.SerializerMethodField()
 
     class Meta:
         model = HeightChange
@@ -125,6 +125,6 @@ class HeightArraySerializers(serializers.ModelSerializer):
         heightArray = []
 
         for item in dogHeights:
-            heightArray.append(item.weight)
+            heightArray.append(item.height)
         
         return heightArray
