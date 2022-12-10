@@ -1,0 +1,1520 @@
+[
+    {
+        "model": "database.breed",
+        "pk": 413,
+        "fields": {
+            "name": "Airedale",
+            "min_height_female": "23.00",
+            "max_height_female": "23.00",
+            "min_height_male": "23.00",
+            "max_height_male": "23.00",
+            "min_weight_female": "50.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 414,
+        "fields": {
+            "name": "Appenzeller",
+            "min_height_female": "19.00",
+            "max_height_female": "22.00",
+            "min_height_male": "19.00",
+            "max_height_male": "22.00",
+            "min_weight_female": "48.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "48.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 415,
+        "fields": {
+            "name": "Affenpinscher",
+            "min_height_female": "9.00",
+            "max_height_female": "11.50",
+            "min_height_male": "9.00",
+            "max_height_male": "11.50",
+            "min_weight_female": "7.00",
+            "max_weight_female": "10.00",
+            "min_weight_male": "7.00",
+            "max_weight_male": "10.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 416,
+        "fields": {
+            "name": "Akita",
+            "min_height_female": "26.00",
+            "max_height_female": "28.00",
+            "min_height_male": "26.00",
+            "max_height_male": "28.00",
+            "min_weight_female": "70.00",
+            "max_weight_female": "100.00",
+            "min_weight_male": "100.00",
+            "max_weight_male": "130.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 417,
+        "fields": {
+            "name": "Basenji",
+            "min_height_female": "17.00",
+            "max_height_female": "17.00",
+            "min_height_male": "17.00",
+            "max_height_male": "17.00",
+            "min_weight_female": "22.00",
+            "max_weight_female": "22.00",
+            "min_weight_male": "24.00",
+            "max_weight_male": "24.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 418,
+        "fields": {
+            "name": "Beagle",
+            "min_height_female": "13.00",
+            "max_height_female": "15.00",
+            "min_height_male": "14.00",
+            "max_height_male": "16.00",
+            "min_weight_female": "20.00",
+            "max_weight_female": "30.00",
+            "min_weight_male": "15.00",
+            "max_weight_male": "20.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 419,
+        "fields": {
+            "name": "Borzoi",
+            "min_height_female": "27.00",
+            "max_height_female": "31.00",
+            "min_height_male": "30.00",
+            "max_height_male": "33.00",
+            "min_weight_female": "60.00",
+            "max_weight_female": "85.00",
+            "min_weight_male": "75.00",
+            "max_weight_male": "105.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 420,
+        "fields": {
+            "name": "Boxer",
+            "min_height_female": "23.00",
+            "max_height_female": "25.00",
+            "min_height_male": "23.00",
+            "max_height_male": "25.00",
+            "min_weight_female": "50.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "65.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 421,
+        "fields": {
+            "name": "Bluetick",
+            "min_height_female": "22.00",
+            "max_height_female": "27.00",
+            "min_height_male": "22.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 422,
+        "fields": {
+            "name": "Briard",
+            "min_height_female": "23.00",
+            "max_height_female": "27.00",
+            "min_height_male": "23.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "55.00",
+            "max_weight_female": "100.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "100.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 423,
+        "fields": {
+            "name": "German shepherd",
+            "min_height_female": "24.00",
+            "max_height_female": "26.00",
+            "min_height_male": "24.00",
+            "max_height_male": "26.00",
+            "min_weight_female": "50.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "65.00",
+            "max_weight_male": "90.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 424,
+        "fields": {
+            "name": "Bearded collie",
+            "min_height_female": "21.00",
+            "max_height_female": "22.00",
+            "min_height_male": "21.00",
+            "max_height_male": "22.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "55.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "55.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 425,
+        "fields": {
+            "name": "Corgi",
+            "min_height_female": "10.50",
+            "max_height_female": "12.50",
+            "min_height_male": "10.50",
+            "max_height_male": "12.50",
+            "min_weight_female": "25.00",
+            "max_weight_female": "34.00",
+            "min_weight_male": "30.00",
+            "max_weight_male": "38.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 426,
+        "fields": {
+            "name": "Eskimo",
+            "min_height_female": "24.00",
+            "max_height_female": "26.00",
+            "min_height_male": "24.00",
+            "max_height_male": "26.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "65.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 427,
+        "fields": {
+            "name": "Entlebucher",
+            "min_height_female": "17.00",
+            "max_height_female": "21.00",
+            "min_height_male": "17.00",
+            "max_height_male": "21.00",
+            "min_weight_female": "40.00",
+            "max_weight_female": "55.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "65.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 428,
+        "fields": {
+            "name": "Chow",
+            "min_height_female": "17.00",
+            "max_height_female": "20.00",
+            "min_height_male": "17.00",
+            "max_height_male": "20.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 429,
+        "fields": {
+            "name": "Norwegian elkhound",
+            "min_height_female": "20.50",
+            "max_height_female": "20.50",
+            "min_height_male": "20.50",
+            "max_height_male": "20.50",
+            "min_weight_female": "48.00",
+            "max_weight_female": "48.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "55.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 430,
+        "fields": {
+            "name": "French bulldog",
+            "min_height_female": "11.00",
+            "max_height_female": "13.00",
+            "min_height_male": "11.00",
+            "max_height_male": "13.00",
+            "min_weight_female": "18.00",
+            "max_weight_female": "26.00",
+            "min_weight_male": "20.00",
+            "max_weight_male": "28.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 431,
+        "fields": {
+            "name": "Border collie",
+            "min_height_female": "19.00",
+            "max_height_female": "22.00",
+            "min_height_male": "19.00",
+            "max_height_male": "22.00",
+            "min_weight_female": "30.00",
+            "max_weight_female": "55.00",
+            "min_weight_male": "30.00",
+            "max_weight_male": "55.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 432,
+        "fields": {
+            "name": "Bouvier",
+            "min_height_female": "24.50",
+            "max_height_female": "27.50",
+            "min_height_male": "24.50",
+            "max_height_male": "27.50",
+            "min_weight_female": "70.00",
+            "max_weight_female": "110.00",
+            "min_weight_male": "70.00",
+            "max_weight_male": "110.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 433,
+        "fields": {
+            "name": "American bulldog",
+            "min_height_female": "20.00",
+            "max_height_female": "24.00",
+            "min_height_male": "20.00",
+            "max_height_male": "28.00",
+            "min_weight_female": "60.00",
+            "max_weight_female": "80.00",
+            "min_weight_male": "75.00",
+            "max_weight_male": "100.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 434,
+        "fields": {
+            "name": "Havanese",
+            "min_height_female": "8.50",
+            "max_height_female": "11.50",
+            "min_height_male": "8.50",
+            "max_height_male": "11.50",
+            "min_weight_female": "7.00",
+            "max_weight_female": "13.00",
+            "min_weight_male": "7.00",
+            "max_weight_male": "13.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 435,
+        "fields": {
+            "name": "Kelpie",
+            "min_height_female": "17.00",
+            "max_height_female": "20.00",
+            "min_height_male": "17.00",
+            "max_height_male": "20.00",
+            "min_weight_female": "35.00",
+            "max_weight_female": "50.00",
+            "min_weight_male": "35.00",
+            "max_weight_male": "50.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 436,
+        "fields": {
+            "name": "Husky",
+            "min_height_female": "21.00",
+            "max_height_female": "23.50",
+            "min_height_male": "21.00",
+            "max_height_male": "23.50",
+            "min_weight_female": "35.00",
+            "max_weight_female": "50.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "60.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 437,
+        "fields": {
+            "name": "Clumber",
+            "min_height_female": "18.00",
+            "max_height_female": "20.00",
+            "min_height_male": "18.00",
+            "max_height_male": "20.00",
+            "min_weight_female": "55.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "70.00",
+            "max_weight_male": "85.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 438,
+        "fields": {
+            "name": "Afghan hound",
+            "min_height_female": "25.00",
+            "max_height_female": "27.00",
+            "min_height_male": "25.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "50.00",
+            "max_weight_female": "60.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "60.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 439,
+        "fields": {
+            "name": "Dalmatian",
+            "min_height_female": "19.00",
+            "max_height_female": "24.00",
+            "min_height_male": "19.00",
+            "max_height_male": "24.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 440,
+        "fields": {
+            "name": "Giant schnauzer",
+            "min_height_female": "25.50",
+            "max_height_female": "27.50",
+            "min_height_male": "25.50",
+            "max_height_male": "27.50",
+            "min_weight_female": "55.00",
+            "max_weight_female": "75.00",
+            "min_weight_male": "60.00",
+            "max_weight_male": "85.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 441,
+        "fields": {
+            "name": "Coonhound",
+            "min_height_female": "24.00",
+            "max_height_female": "26.00",
+            "min_height_male": "24.00",
+            "max_height_male": "26.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "65.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 442,
+        "fields": {
+            "name": "Dachshund",
+            "min_height_female": "8.00",
+            "max_height_female": "9.00",
+            "min_height_male": "8.00",
+            "max_height_male": "9.00",
+            "min_weight_female": "16.00",
+            "max_weight_female": "32.00",
+            "min_weight_male": "16.00",
+            "max_weight_male": "32.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 443,
+        "fields": {
+            "name": "Italian greyhound",
+            "min_height_female": "13.00",
+            "max_height_female": "15.00",
+            "min_height_male": "13.00",
+            "max_height_male": "15.00",
+            "min_weight_female": "7.00",
+            "max_weight_female": "14.00",
+            "min_weight_male": "7.00",
+            "max_weight_male": "14.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 444,
+        "fields": {
+            "name": "Chihuahua",
+            "min_height_female": "5.00",
+            "max_height_female": "8.00",
+            "min_height_male": "5.00",
+            "max_height_male": "8.00",
+            "min_weight_female": "4.00",
+            "max_weight_female": "6.00",
+            "min_weight_male": "4.00",
+            "max_weight_male": "6.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 445,
+        "fields": {
+            "name": "Gordon setter",
+            "min_height_female": "24.00",
+            "max_height_female": "27.00",
+            "min_height_male": "24.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 446,
+        "fields": {
+            "name": "Kuvasz",
+            "min_height_female": "28.00",
+            "max_height_female": "30.00",
+            "min_height_male": "28.00",
+            "max_height_male": "30.00",
+            "min_weight_female": "70.00",
+            "max_weight_female": "90.00",
+            "min_weight_male": "100.00",
+            "max_weight_male": "115.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 447,
+        "fields": {
+            "name": "Bavarian mountain",
+            "min_height_female": "17.00",
+            "max_height_female": "20.50",
+            "min_height_male": "17.00",
+            "max_height_male": "20.50",
+            "min_weight_female": "37.00",
+            "max_weight_female": "66.00",
+            "min_weight_male": "37.00",
+            "max_weight_male": "66.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 448,
+        "fields": {
+            "name": "Basset hound",
+            "min_height_female": "11.00",
+            "max_height_female": "14.00",
+            "min_height_male": "12.00",
+            "max_height_male": "15.00",
+            "min_weight_female": "40.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "40.00",
+            "max_weight_male": "65.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 449,
+        "fields": {
+            "name": "Newfoundland",
+            "min_height_female": "28.00",
+            "max_height_female": "28.00",
+            "min_height_male": "28.00",
+            "max_height_male": "28.00",
+            "min_weight_female": "100.00",
+            "max_weight_female": "120.00",
+            "min_weight_male": "130.00",
+            "max_weight_male": "150.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 450,
+        "fields": {
+            "name": "Doberman",
+            "min_height_female": "26.00",
+            "max_height_female": "28.00",
+            "min_height_male": "26.00",
+            "max_height_male": "28.00",
+            "min_weight_female": "60.00",
+            "max_weight_female": "90.00",
+            "min_weight_male": "75.00",
+            "max_weight_male": "100.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 451,
+        "fields": {
+            "name": "Malamute",
+            "min_height_female": "25.00",
+            "max_height_female": "25.00",
+            "min_height_male": "25.00",
+            "max_height_male": "25.00",
+            "min_weight_female": "75.00",
+            "max_weight_female": "75.00",
+            "min_weight_male": "85.00",
+            "max_weight_male": "85.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 452,
+        "fields": {
+            "name": "Saluki",
+            "min_height_female": "23.00",
+            "max_height_female": "28.00",
+            "min_height_male": "23.00",
+            "max_height_male": "28.00",
+            "min_weight_female": "40.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "40.00",
+            "max_weight_male": "65.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 453,
+        "fields": {
+            "name": "Komondor",
+            "min_height_female": "25.00",
+            "max_height_female": "27.00",
+            "min_height_male": "28.00",
+            "max_height_male": "30.00",
+            "min_weight_female": "88.00",
+            "max_weight_female": "110.00",
+            "min_weight_male": "110.00",
+            "max_weight_male": "130.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 454,
+        "fields": {
+            "name": "Ibizan hound",
+            "min_height_female": "23.50",
+            "max_height_female": "27.50",
+            "min_height_male": "23.50",
+            "max_height_male": "27.50",
+            "min_weight_female": "45.00",
+            "max_weight_female": "45.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "50.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 455,
+        "fields": {
+            "name": "Australian terrier",
+            "min_height_female": "10.00",
+            "max_height_female": "11.00",
+            "min_height_male": "10.00",
+            "max_height_male": "11.00",
+            "min_weight_female": "15.00",
+            "max_weight_female": "20.00",
+            "min_weight_male": "15.00",
+            "max_weight_male": "20.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 456,
+        "fields": {
+            "name": "Labrador",
+            "min_height_female": "22.50",
+            "max_height_female": "24.50",
+            "min_height_male": "22.50",
+            "max_height_male": "24.50",
+            "min_weight_female": "55.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "65.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 457,
+        "fields": {
+            "name": "Lhasa",
+            "min_height_female": "10.00",
+            "max_height_female": "11.00",
+            "min_height_male": "10.00",
+            "max_height_male": "11.00",
+            "min_weight_female": "12.00",
+            "max_weight_female": "18.00",
+            "min_weight_male": "12.00",
+            "max_weight_male": "18.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 458,
+        "fields": {
+            "name": "Malinois",
+            "min_height_female": "24.00",
+            "max_height_female": "26.00",
+            "min_height_male": "24.00",
+            "max_height_male": "26.00",
+            "min_weight_female": "40.00",
+            "max_weight_female": "60.00",
+            "min_weight_male": "60.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 459,
+        "fields": {
+            "name": "Tibetan mastiff",
+            "min_height_female": "24.00",
+            "max_height_female": "28.00",
+            "min_height_male": "26.00",
+            "max_height_male": "30.00",
+            "min_weight_female": "70.00",
+            "max_weight_female": "120.00",
+            "min_weight_male": "90.00",
+            "max_weight_male": "150.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 460,
+        "fields": {
+            "name": "Plott hound",
+            "min_height_female": "20.00",
+            "max_height_female": "25.00",
+            "min_height_male": "20.00",
+            "max_height_male": "25.00",
+            "min_weight_female": "40.00",
+            "max_weight_female": "55.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "60.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 461,
+        "fields": {
+            "name": "Leonberg",
+            "min_height_female": "28.00",
+            "max_height_female": "31.50",
+            "min_height_male": "28.00",
+            "max_height_male": "31.50",
+            "min_weight_female": "90.00",
+            "max_weight_female": "140.00",
+            "min_weight_male": "110.00",
+            "max_weight_male": "170.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 462,
+        "fields": {
+            "name": "Maltese",
+            "min_height_female": "7.00",
+            "max_height_female": "9.00",
+            "min_height_male": "7.00",
+            "max_height_male": "9.00",
+            "min_weight_female": "6.60",
+            "max_weight_female": "8.80",
+            "min_weight_male": "6.60",
+            "max_weight_male": "8.80"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 463,
+        "fields": {
+            "name": "German longhaired pointer",
+            "min_height_female": "22.00",
+            "max_height_female": "28.00",
+            "min_height_male": "22.00",
+            "max_height_male": "28.00",
+            "min_weight_female": "55.00",
+            "max_weight_female": "80.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 464,
+        "fields": {
+            "name": "Rottweiler",
+            "min_height_female": "24.00",
+            "max_height_female": "27.00",
+            "min_height_male": "24.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "80.00",
+            "max_weight_female": "100.00",
+            "min_weight_male": "95.00",
+            "max_weight_male": "135.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 465,
+        "fields": {
+            "name": "Papillon",
+            "min_height_female": "8.00",
+            "max_height_female": "11.00",
+            "min_height_male": "8.00",
+            "max_height_male": "11.00",
+            "min_weight_female": "5.00",
+            "max_weight_female": "10.00",
+            "min_weight_male": "5.00",
+            "max_weight_male": "10.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 466,
+        "fields": {
+            "name": "Pug",
+            "min_height_female": "10.00",
+            "max_height_female": "13.00",
+            "min_height_male": "10.00",
+            "max_height_male": "13.00",
+            "min_weight_female": "14.00",
+            "max_weight_female": "18.00",
+            "min_weight_male": "14.00",
+            "max_weight_male": "18.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 467,
+        "fields": {
+            "name": "Swiss mountain",
+            "min_height_female": "25.50",
+            "max_height_female": "28.50",
+            "min_height_male": "25.50",
+            "max_height_male": "28.50",
+            "min_weight_female": "85.00",
+            "max_weight_female": "110.00",
+            "min_weight_male": "115.00",
+            "max_weight_male": "140.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 468,
+        "fields": {
+            "name": "Schipperke",
+            "min_height_female": "11.00",
+            "max_height_female": "13.00",
+            "min_height_male": "11.00",
+            "max_height_male": "13.00",
+            "min_weight_female": "10.00",
+            "max_weight_female": "16.00",
+            "min_weight_male": "10.00",
+            "max_weight_male": "16.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 469,
+        "fields": {
+            "name": "Otterhound",
+            "min_height_female": "27.00",
+            "max_height_female": "27.00",
+            "min_height_male": "27.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "80.00",
+            "max_weight_female": "80.00",
+            "min_weight_male": "115.00",
+            "max_weight_male": "115.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 470,
+        "fields": {
+            "name": "Yorkshire terrier",
+            "min_height_female": "7.00",
+            "max_height_female": "8.00",
+            "min_height_male": "7.00",
+            "max_height_male": "8.00",
+            "min_weight_female": "7.00",
+            "max_weight_female": "7.00",
+            "min_weight_male": "7.00",
+            "max_weight_male": "7.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 471,
+        "fields": {
+            "name": "Shetland sheepdog",
+            "min_height_female": "13.00",
+            "max_height_female": "16.00",
+            "min_height_male": "13.00",
+            "max_height_male": "16.00",
+            "min_weight_female": "15.00",
+            "max_weight_female": "25.00",
+            "min_weight_male": "15.00",
+            "max_weight_male": "25.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 472,
+        "fields": {
+            "name": "English setter",
+            "min_height_female": "25.00",
+            "max_height_female": "27.00",
+            "min_height_male": "25.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "55.00",
+            "min_weight_male": "65.00",
+            "max_weight_male": "80.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 473,
+        "fields": {
+            "name": "Bernese mountain",
+            "min_height_female": "25.00",
+            "max_height_female": "27.50",
+            "min_height_male": "25.00",
+            "max_height_male": "27.50",
+            "min_weight_female": "70.00",
+            "max_weight_female": "95.00",
+            "min_weight_male": "80.00",
+            "max_weight_male": "115.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 474,
+        "fields": {
+            "name": "Miniature schnauzer",
+            "min_height_female": "12.00",
+            "max_height_female": "14.00",
+            "min_height_male": "12.00",
+            "max_height_male": "14.00",
+            "min_weight_female": "11.00",
+            "max_weight_female": "20.00",
+            "min_weight_male": "11.00",
+            "max_weight_male": "20.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 475,
+        "fields": {
+            "name": "English springer",
+            "min_height_female": "20.00",
+            "max_height_female": "20.00",
+            "min_height_male": "20.00",
+            "max_height_male": "20.00",
+            "min_weight_female": "40.00",
+            "max_weight_female": "40.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "50.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 476,
+        "fields": {
+            "name": "Shiba",
+            "min_height_female": "14.50",
+            "max_height_female": "16.50",
+            "min_height_male": "14.50",
+            "max_height_male": "16.50",
+            "min_weight_female": "17.00",
+            "max_weight_female": "17.00",
+            "min_weight_male": "23.00",
+            "max_weight_male": "23.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 477,
+        "fields": {
+            "name": "Golden retriever",
+            "min_height_female": "23.00",
+            "max_height_female": "24.00",
+            "min_height_male": "23.00",
+            "max_height_male": "24.00",
+            "min_weight_female": "55.00",
+            "max_weight_female": "65.00",
+            "min_weight_male": "65.00",
+            "max_weight_male": "75.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 478,
+        "fields": {
+            "name": "Redbone",
+            "min_height_female": "22.00",
+            "max_height_female": "27.00",
+            "min_height_male": "22.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 479,
+        "fields": {
+            "name": "Pembroke",
+            "min_height_female": "10.00",
+            "max_height_female": "12.00",
+            "min_height_male": "10.00",
+            "max_height_male": "12.00",
+            "min_weight_female": "24.00",
+            "max_weight_female": "28.00",
+            "min_weight_male": "24.00",
+            "max_weight_male": "31.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 480,
+        "fields": {
+            "name": "Bedlington terrier",
+            "min_height_female": "15.00",
+            "max_height_female": "17.50",
+            "min_height_male": "15.00",
+            "max_height_male": "17.50",
+            "min_weight_female": "17.00",
+            "max_weight_female": "23.00",
+            "min_weight_male": "17.00",
+            "max_weight_male": "23.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 481,
+        "fields": {
+            "name": "Irish setter",
+            "min_height_female": "27.00",
+            "max_height_female": "27.00",
+            "min_height_male": "27.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "60.00",
+            "max_weight_female": "60.00",
+            "min_weight_male": "70.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 482,
+        "fields": {
+            "name": "Cairn terrier",
+            "min_height_female": "10.00",
+            "max_height_female": "10.00",
+            "min_height_male": "10.00",
+            "max_height_male": "10.00",
+            "min_weight_female": "13.00",
+            "max_weight_female": "13.00",
+            "min_weight_male": "14.00",
+            "max_weight_male": "14.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 483,
+        "fields": {
+            "name": "Irish terrier",
+            "min_height_female": "18.00",
+            "max_height_female": "18.00",
+            "min_height_male": "18.00",
+            "max_height_male": "18.00",
+            "min_weight_female": "25.00",
+            "max_weight_female": "25.00",
+            "min_weight_male": "27.00",
+            "max_weight_male": "27.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 484,
+        "fields": {
+            "name": "English sheepdog",
+            "min_height_female": "22.00",
+            "max_height_female": "24.00",
+            "min_height_male": "20.00",
+            "max_height_male": "22.00",
+            "min_weight_female": "60.00",
+            "max_weight_female": "100.00",
+            "min_weight_male": "60.00",
+            "max_weight_male": "100.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 485,
+        "fields": {
+            "name": "Vizsla",
+            "min_height_female": "22.00",
+            "max_height_female": "24.00",
+            "min_height_male": "22.00",
+            "max_height_male": "24.00",
+            "min_weight_female": "44.00",
+            "max_weight_female": "55.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "60.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 486,
+        "fields": {
+            "name": "Norwich terrier",
+            "min_height_female": "10.00",
+            "max_height_female": "10.00",
+            "min_height_male": "10.00",
+            "max_height_male": "10.00",
+            "min_weight_female": "12.00",
+            "max_weight_female": "12.00",
+            "min_weight_male": "12.00",
+            "max_weight_male": "12.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 487,
+        "fields": {
+            "name": "Airedale terrier",
+            "min_height_female": "23.00",
+            "max_height_female": "23.00",
+            "min_height_male": "23.00",
+            "max_height_male": "23.00",
+            "min_weight_female": "50.00",
+            "max_weight_female": "70.00",
+            "min_weight_male": "50.00",
+            "max_weight_male": "70.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 488,
+        "fields": {
+            "name": "Keeshond",
+            "min_height_female": "18.00",
+            "max_height_female": "18.00",
+            "min_height_male": "18.00",
+            "max_height_male": "18.00",
+            "min_weight_female": "35.00",
+            "max_weight_female": "45.00",
+            "min_weight_male": "35.00",
+            "max_weight_male": "45.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 489,
+        "fields": {
+            "name": "Wheaten terrier",
+            "min_height_female": "18.00",
+            "max_height_female": "19.00",
+            "min_height_male": "18.00",
+            "max_height_male": "19.00",
+            "min_weight_female": "30.00",
+            "max_weight_female": "35.00",
+            "min_weight_male": "35.00",
+            "max_weight_male": "40.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 490,
+        "fields": {
+            "name": "Sussex spaniel",
+            "min_height_female": "13.00",
+            "max_height_female": "15.00",
+            "min_height_male": "13.00",
+            "max_height_male": "15.00",
+            "min_weight_female": "35.00",
+            "max_weight_female": "45.00",
+            "min_weight_male": "35.00",
+            "max_weight_male": "45.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 491,
+        "fields": {
+            "name": "Scottish terrier",
+            "min_height_female": "10.00",
+            "max_height_female": "10.00",
+            "min_height_male": "10.00",
+            "max_height_male": "10.00",
+            "min_weight_female": "18.00",
+            "max_weight_female": "21.00",
+            "min_weight_male": "19.00",
+            "max_weight_male": "22.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 492,
+        "fields": {
+            "name": "Silky terrier",
+            "min_height_female": "9.00",
+            "max_height_female": "10.00",
+            "min_height_male": "9.00",
+            "max_height_male": "10.00",
+            "min_weight_female": "8.00",
+            "max_weight_female": "10.00",
+            "min_weight_male": "8.00",
+            "max_weight_male": "10.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 493,
+        "fields": {
+            "name": "Russell terrier",
+            "min_height_female": "14.00",
+            "max_height_female": "14.00",
+            "min_height_male": "14.00",
+            "max_height_male": "14.00",
+            "min_weight_female": "13.00",
+            "max_weight_female": "17.00",
+            "min_weight_male": "13.00",
+            "max_weight_male": "17.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 494,
+        "fields": {
+            "name": "Lakeland terrier",
+            "min_height_female": "14.50",
+            "max_height_female": "15.00",
+            "min_height_male": "14.50",
+            "max_height_male": "15.00",
+            "min_weight_female": "15.00",
+            "max_weight_female": "18.00",
+            "min_weight_male": "15.00",
+            "max_weight_male": "18.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 495,
+        "fields": {
+            "name": "Miniature pinscher",
+            "min_height_female": "10.00",
+            "max_height_female": "12.50",
+            "min_height_male": "10.00",
+            "max_height_male": "12.50",
+            "min_weight_female": "8.00",
+            "max_weight_female": "10.00",
+            "min_weight_male": "8.00",
+            "max_weight_male": "10.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 496,
+        "fields": {
+            "name": "Fox terrier",
+            "min_height_female": "15.50",
+            "max_height_female": "15.50",
+            "min_height_male": "15.50",
+            "max_height_male": "15.50",
+            "min_weight_female": "15.00",
+            "max_weight_female": "17.00",
+            "min_weight_male": "18.00",
+            "max_weight_male": "18.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 497,
+        "fields": {
+            "name": "Samoyed",
+            "min_height_female": "21.00",
+            "max_height_female": "23.50",
+            "min_height_male": "21.00",
+            "max_height_male": "23.50",
+            "min_weight_female": "35.00",
+            "max_weight_female": "50.00",
+            "min_weight_male": "45.00",
+            "max_weight_male": "65.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 498,
+        "fields": {
+            "name": "Norfolk terrier",
+            "min_height_female": "9.00",
+            "max_height_female": "10.00",
+            "min_height_male": "9.00",
+            "max_height_male": "10.00",
+            "min_weight_female": "11.00",
+            "max_weight_female": "12.00",
+            "min_weight_male": "11.00",
+            "max_weight_male": "12.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 499,
+        "fields": {
+            "name": "Pyrenees",
+            "min_height_female": "27.00",
+            "max_height_female": "32.00",
+            "min_height_male": "27.00",
+            "max_height_male": "32.00",
+            "min_weight_female": "80.00",
+            "max_weight_female": "90.00",
+            "min_weight_male": "110.00",
+            "max_weight_male": "120.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 500,
+        "fields": {
+            "name": "Cocker spaniel",
+            "min_height_female": "14.50",
+            "max_height_female": "15.50",
+            "min_height_male": "14.50",
+            "max_height_male": "15.50",
+            "min_weight_female": "20.00",
+            "max_weight_female": "25.00",
+            "min_weight_male": "25.00",
+            "max_weight_male": "30.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 501,
+        "fields": {
+            "name": "Tibetan terrier",
+            "min_height_female": "14.00",
+            "max_height_female": "17.00",
+            "min_height_male": "14.00",
+            "max_height_male": "17.00",
+            "min_weight_female": "18.00",
+            "max_weight_female": "31.00",
+            "min_weight_male": "18.00",
+            "max_weight_male": "31.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 502,
+        "fields": {
+            "name": "Border terrier",
+            "min_height_female": "12.00",
+            "max_height_female": "15.00",
+            "min_height_male": "12.00",
+            "max_height_male": "15.00",
+            "min_weight_female": "11.50",
+            "max_weight_female": "14.00",
+            "min_weight_male": "13.00",
+            "max_weight_male": "15.50"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 503,
+        "fields": {
+            "name": "Sealyham terrier",
+            "min_height_female": "10.50",
+            "max_height_female": "10.50",
+            "min_height_male": "10.50",
+            "max_height_male": "10.50",
+            "min_weight_female": "20.00",
+            "max_weight_female": "22.00",
+            "min_weight_male": "23.00",
+            "max_weight_male": "24.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 504,
+        "fields": {
+            "name": "Tervuren",
+            "min_height_female": "24.00",
+            "max_height_female": "26.00",
+            "min_height_male": "24.00",
+            "max_height_male": "26.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "60.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "75.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 505,
+        "fields": {
+            "name": "Irish wolfhound",
+            "min_height_female": "32.00",
+            "max_height_female": "34.00",
+            "min_height_male": "32.00",
+            "max_height_male": "34.00",
+            "min_weight_female": "105.00",
+            "max_weight_female": "105.00",
+            "min_weight_male": "120.00",
+            "max_weight_male": "120.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 506,
+        "fields": {
+            "name": "Welsh terrier",
+            "min_height_female": "15.00",
+            "max_height_female": "15.00",
+            "min_height_male": "15.00",
+            "max_height_male": "15.00",
+            "min_weight_female": "20.00",
+            "max_weight_female": "22.00",
+            "min_weight_male": "20.00",
+            "max_weight_male": "22.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 507,
+        "fields": {
+            "name": "Whippet",
+            "min_height_female": "19.00",
+            "max_height_female": "22.00",
+            "min_height_male": "19.00",
+            "max_height_male": "22.00",
+            "min_weight_female": "25.00",
+            "max_weight_female": "40.00",
+            "min_weight_male": "25.00",
+            "max_weight_male": "40.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 508,
+        "fields": {
+            "name": "Pomeranian",
+            "min_height_female": "6.00",
+            "max_height_female": "7.00",
+            "min_height_male": "6.00",
+            "max_height_male": "7.00",
+            "min_weight_female": "3.00",
+            "max_weight_female": "7.00",
+            "min_weight_male": "3.00",
+            "max_weight_male": "7.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 509,
+        "fields": {
+            "name": "Weimaraner",
+            "min_height_female": "25.00",
+            "max_height_female": "27.00",
+            "min_height_male": "25.00",
+            "max_height_male": "27.00",
+            "min_weight_female": "55.00",
+            "max_weight_female": "75.00",
+            "min_weight_male": "70.00",
+            "max_weight_male": "90.00"
+        }
+    },
+    {
+        "model": "database.breed",
+        "pk": 510,
+        "fields": {
+            "name": "Belgian sheepdog",
+            "min_height_female": "24.00",
+            "max_height_female": "26.00",
+            "min_height_male": "24.00",
+            "max_height_male": "26.00",
+            "min_weight_female": "45.00",
+            "max_weight_female": "60.00",
+            "min_weight_male": "55.00",
+            "max_weight_male": "75.00"
+        }
+    },
+
+        {
+            "model": "database.activitylist",
+            "pk": 1,
+            "fields": {
+                "name": "Food",
+                "dimension": "Ounces",
+                "verb": "Ate"
+            }
+        },
+        {
+            "model": "database.activitylist",
+            "pk": 2,
+            "fields": {
+                "name": "Pee",
+                "dimension": "Size",
+                "verb": "Relieved"
+            }
+        },
+        {
+            "model": "database.activitylist",
+            "pk": 3,
+            "fields": {
+                "name": "Poop",
+                "dimension": "Size",
+                "verb": "Relieved"
+            }
+        },
+        {
+            "model": "database.activitylist",
+            "pk": 5,
+            "fields": {
+                "name": "Walk",
+                "dimension": "Miles",
+                "verb": "Walked"
+            }
+        },
+        {
+            "model": "database.activitylist",
+            "pk": 6,
+            "fields": {
+                "name": "Playtime",
+                "dimension": "Minutes",
+                "verb": "Played"
+            }
+        }
+        ]
+        
+    

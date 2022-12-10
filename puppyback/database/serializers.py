@@ -128,3 +128,9 @@ class HeightArraySerializers(serializers.ModelSerializer):
             heightArray.append(item.height)
         
         return heightArray
+
+class BreedPostSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Breed
+        fields = "__all__"

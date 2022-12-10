@@ -1,0 +1,47 @@
+[
+{
+    "model": "database.activitylist",
+    "pk": 1,
+    "fields": {
+        "name": "Food",
+        "dimension": "Ounces",
+        "verb": "Ate"
+    }
+},
+{
+    "model": "database.activitylist",
+    "pk": 2,
+    "fields": {
+        "name": "Pee",
+        "dimension": "Size",
+        "verb": "Relieved"
+    }
+},
+{
+    "model": "database.activitylist",
+    "pk": 3,
+    "fields": {
+        "name": "Poop",
+        "dimension": "Size",
+        "verb": "Relieved"
+    }
+},
+{
+    "model": "database.activitylist",
+    "pk": 5,
+    "fields": {
+        "name": "Walk",
+        "dimension": "Miles",
+        "verb": "Walked"
+    }
+},
+{
+    "model": "database.activitylist",
+    "pk": 6,
+    "fields": {
+        "name": "Playtime",
+        "dimension": "Minutes",
+        "verb": "Played"
+    }
+}
+]

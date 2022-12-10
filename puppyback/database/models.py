@@ -36,6 +36,9 @@ class Breed(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        ordering = ['name']
 
 class DogBreed(models.Model):
     dog = models.ForeignKey(Dog, on_delete=models.CASCADE)

@@ -150,3 +150,8 @@ class HeightArrayViewSet(ModelViewSet):
     serializer_class = HeightArraySerializers
     http_method_names = ['get', 'post', 'put', 'delete']
     filterset_fields = ['dog__id',]
+
+class BreedPostViewSet(ModelViewSet):
+    queryset = Breed.objects.all()
+    serializer_class = BreedPostSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
