@@ -4,22 +4,24 @@ from rest_framework import routers
 from rest_framework_simplejwt import views as jwt_views
 
 router = routers.SimpleRouter()
-router.register(r'dog', DogViewSet)
-router.register(r'user', UserViewSet)
-router.register(r'activity', ActivityViewSet)
-router.register(r'list', ActivityListViewSet)
-router.register(r'create', ActivityIDViewSet)
-router.register(r'nested', ActivityNestedViewSet)
-router.register(r'weight', WeightChangeViewSet)
-router.register(r'height', HeightChangeViewSet)
+router.register(r'dog', DogViewSet)  ## Base view, majority of information
+router.register(r'user', UserViewSet)  ## For user information
+router.register(r'activity', ActivityViewSet)  ## Just has the activitiy list name, not nested
+router.register(r'list', ActivityListViewSet)  ## For the lsit of possible activities input
+router.register(r'create', ActivityIDViewSet)  ## Create ativities, uses ID
+router.register(r'nested', ActivityNestedViewSet)  ## Nested serializers
+router.register(r'weight', WeightChangeViewSet)  ## For weight change
+router.register(r'height', HeightChangeViewSet)  ## For height change
+router.register(r'weightarray', WeightArrayViewSet)
+router.register(r'heightarray', HeightArrayViewSet)
 
 urlpatterns = [
-    path('user/create/', CustomUserCreate.as_view()),
-    path('', include(router.urls)),
-    path('edit/dog/<int:pk>/', DogDetail.as_view()),
-    path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),
-    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-    path('edit/activity/', ActivityDetail.as_view()),
-    path('edit/activity/<int:pk>/', ActivityDetail.as_view()),
+    path('user/create/', CustomUserCreate.as_view()),  ## For creating users
+    path('', include(router.urls)),  ## base URLS
+    path('edit/dog/<int:pk>/', DogDetail.as_view()),  ## For editing dogs 
+    path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'), ## For login purposes
+    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),  ## For refresh 
+    path('edit/activity/', ActivityDetail.as_view()),  ## For activity detail
+    path('edit/activity/<int:pk>/', ActivityDetail.as_view()),  ## For editing activities 
 
 ]

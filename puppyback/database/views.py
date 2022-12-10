@@ -138,3 +138,15 @@ class HeightChangeViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
     filterset_fields = ['dog__id',]
     permission_classes = (permissions.IsAuthenticated,)
+
+class WeightArrayViewSet(ModelViewSet):
+    queryset = WeightChange.objects.all()
+    serializer_class = WeightArraySerializers
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filterset_fields = ['dog__id',]
+    
+class HeightArrayViewSet(ModelViewSet):
+    queryset = HeightChange.objects.all()
+    serializer_class = HeightArraySerializers
+    http_method_names = ['get', 'post', 'put', 'delete']
+    filterset_fields = ['dog__id',]
