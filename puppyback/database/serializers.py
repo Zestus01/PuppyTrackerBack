@@ -134,3 +134,19 @@ class BreedPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Breed
         fields = "__all__"
+
+class BreedListSerializer(serializers.ModelSerializer):
+    name = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Breed
+        fields = ['name']
+    
+    def get_name(self, object):
+        breedList = Breed.objects.all();
+        nameArray = []
+
+        for item in breedList:
+            nameArray.append(item.name)
+        
+        return nameArray

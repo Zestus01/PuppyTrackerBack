@@ -14,7 +14,8 @@ router.register(r'weight', WeightChangeViewSet)  ## For weight change
 router.register(r'height', HeightChangeViewSet)  ## For height change
 router.register(r'weightarray', WeightArrayViewSet)  ## Returns an array for the dog
 router.register(r'heightarray', HeightArrayViewSet)  ## Returns an array of the heights for the dog
-router.register(r'breed', BreedPostViewSet)
+router.register(r'breed', BreedPostViewSet)  ## For detail view about breeds
+router.register(r'breedlist', BreedListViewSet)  ## For just an array of breeds. 
 
 urlpatterns = [
     path('user/create/', CustomUserCreate.as_view()),  ## For creating users

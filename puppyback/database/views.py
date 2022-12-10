@@ -155,3 +155,8 @@ class BreedPostViewSet(ModelViewSet):
     queryset = Breed.objects.all()
     serializer_class = BreedPostSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
+
+class BreedListViewSet(ModelViewSet):
+    queryset = Breed.objects.all()
+    serializer_class = BreedListSerializer
+    http_method_names = ['get', 'post', 'put', 'delete']
