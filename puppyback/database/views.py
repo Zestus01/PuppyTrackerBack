@@ -82,6 +82,7 @@ class ActivityNestedViewSet(ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivityNestedSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
+    filter_backends = [DjangoFilterBackend]
     filterset_fields = ['dog__id', 'dog__name', 'activities__name', 'activities__id']
     permission_classes = (permissions.IsAuthenticated,)   
 
@@ -155,6 +156,8 @@ class BreedPostViewSet(ModelViewSet):
     queryset = Breed.objects.all()
     serializer_class = BreedPostSerializer
     http_method_names = ['get', 'post', 'put', 'delete']
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['name']
 
 class BreedListViewSet(ModelViewSet):
     queryset = Breed.objects.all()

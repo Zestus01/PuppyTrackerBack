@@ -92,7 +92,7 @@ class WeightChangeSerializer(serializers.ModelSerializer):
         fields = ['id', 'weight', 'time', 'dog',]
 
 class HeightChangeSerializer(serializers.ModelSerializer):
-    dog = DogListingField(many=True, queryset=Dog.objects.all(), required=True)
+    dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
     class Meta:
         model = HeightChange
         fields = ['id', 'height', 'time', 'dog',]

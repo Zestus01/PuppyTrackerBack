@@ -113,7 +113,7 @@ class WeightChange(models.Model):
         return f"{self.dog} {self.weight} at {self.time}"
 
     class Meta:
-        ordering = ['-time']
+        ordering = ['time']
 
 class HeightChange(models.Model):
     height = models.DecimalField(default=23, max_digits=5, decimal_places=2, blank=True, validators=[MinValueValidator(0)])
@@ -124,4 +124,4 @@ class HeightChange(models.Model):
         return f"{self.dog} {self.height} at {self.time}"
 
     class Meta:
-        ordering = ['-time']
+        ordering = ['time']
