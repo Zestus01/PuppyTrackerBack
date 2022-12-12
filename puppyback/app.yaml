@@ -20,7 +20,7 @@ runtime: python310
 
 env_variables:
   # This setting is used in settings.py to configure your ALLOWED_HOSTS
-  APPENGINE_URL: double-vision-371020.uk.r.appspot.com
+  APPENGINE_URL: https://health-hound-371413.ue.r.appspot.com
 
 handlers:
 # This configures Google App Engine to serve the files in the app's static
