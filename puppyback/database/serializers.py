@@ -3,6 +3,7 @@ from .models import Dog, DogBreed, DogUser, Breed, CustomUser, Activity, Activit
 from .fields import BreedListingField, OwnerListingField, ActivityListListingField, DogListingField
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
+## Will return all the info for the breed combos
 class DogBreedSerializer(serializers.ModelSerializer):
     class Meta:
         model = DogBreed
@@ -13,6 +14,7 @@ class OwnerSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ['id', 'username', 'first_name', 'last_name']
 
+## For pulling the breed name and individual ID
 class BreedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Breed
@@ -23,6 +25,7 @@ class DogSerializer(serializers.ModelSerializer):
         model = Dog
         fields = ['id', 'name', 'gender', 'weight', 'height', 'breed']
 
+## Most commonly used dog serializers, pulls the data and pieces I like.
 class DogBestSerializer(serializers.ModelSerializer):
     breed = BreedListingField(many=True, queryset=Breed.objects.all(), required=True)
     owner = OwnerListingField(many=True, queryset=CustomUser.objects.all(), required=False)
@@ -64,14 +67,14 @@ class ActivityListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ActivityList
         fields = ['id', 'name', 'dimension', 'verb']
-
+## Pulls he activity and allows posting with the dog's name
 class ActivitySerializer(serializers.ModelSerializer):
     dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
     activities = ActivityListListingField(many=False, queryset=ActivityList.objects.all(), required=False)
     class Meta:
         model = Activity
         fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']
-
+## The serializer that uses the dog's id to post
 class ActivityIDSerializer(serializers.ModelSerializer):
     activities = ActivityListListingField(many=False, queryset=ActivityList.objects.all(), required=False)
     class Meta:
@@ -96,7 +99,7 @@ class HeightChangeSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeightChange
         fields = ['id', 'height', 'time', 'dog',]
-
+## Gets a dog's weight change into an array
 class WeightArraySerializers(serializers.ModelSerializer):
     weight = serializers.SerializerMethodField()
 

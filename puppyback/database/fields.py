@@ -1,10 +1,12 @@
 from .models import *
 from rest_framework import serializers
 
+## These fields provide a bridgeway for what info the serializer is looking for
 class BreedListingField(serializers.RelatedField):
+    ## to_representation is similar to a get request. Its the representation of breeds
     def to_representation(self, instance):
         return instance.name
-    
+    ## to_internal_value is used for posts. It queries the model for the breed name given
     def to_internal_value(self, data):
         return Breed.objects.get(name=data)
 

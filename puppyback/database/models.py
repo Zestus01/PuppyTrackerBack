@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator
 from django.contrib.auth.models import AbstractUser
 
-
+## Dog model, Keep track of Dog's name, weight, and gender
 class Dog(models.Model):
     MALE = 'Male'
     FEMALE = 'Female'
@@ -83,6 +83,7 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return f"{self.username}: {self.first_name} {self.last_name}"
 
+## List of possible activities for the user to enter
 class ActivityList(models.Model):
     name = models.CharField(max_length=40, unique=True)
     dimension = models.CharField(max_length=20)
@@ -91,6 +92,7 @@ class ActivityList(models.Model):
     def __str__(self):
         return f"{self.name}: {self.dimension}"
 
+## Each recorded activity for the dogs. 
 class Activity(models.Model):
     dog = models.ForeignKey(Dog, on_delete=models.CASCADE, related_name="activity_dog")
     activities = models.ForeignKey(ActivityList, on_delete=models.PROTECT, related_name="activity_activityaist")
@@ -104,6 +106,7 @@ class Activity(models.Model):
     class Meta: 
         ordering = ['-time']
 
+## Keeps track of weight changes for a particular dog
 class WeightChange(models.Model):
     weight = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])       
     time = models.DateTimeField(auto_now_add=True)

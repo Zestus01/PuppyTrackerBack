@@ -64,7 +64,7 @@ class ActivityListViewSet(ModelViewSet):
     queryset = ActivityList.objects.all()
     serializer_class = ActivityListSerializer
     permission_classes = (permissions.AllowAny,)
-
+## Most important view set, pulls all the info
 class DogViewSet(ModelViewSet):
     queryset = Dog.objects.all()
     serializer_class = DogBestSerializer
