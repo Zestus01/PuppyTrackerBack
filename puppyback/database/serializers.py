@@ -67,13 +67,39 @@ class ActivityListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ActivityList
         fields = ['id', 'name', 'dimension', 'verb']
+
 ## Pulls he activity and allows posting with the dog's name
 class ActivitySerializer(serializers.ModelSerializer):
     dog = DogListingField(many=False, queryset=Dog.objects.all(), required=True)
     activities = ActivityListListingField(many=False, queryset=ActivityList.objects.all(), required=False)
+    family = serializers.SerializerMethodField()
+
     class Meta:
         model = Activity
-        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time']
+        fields = ['id', 'dog', 'activities', 'amount', 'description', 'time', 'family']
+
+    def get_family(self, object):
+        fullFamily = Activity.objects.filter(dog=object.id)
+        familyMembers = []
+
+        for item in fullFamily:
+            if(item.family not in familyMembers and item.family != ""):
+                familyMembers.append(item.family)
+        
+        return familyMembers
+
+
+
+
+    def get_weight(self, object):
+        dogWeights = WeightChange.objects.filter(dog=object.id);
+        weightArray = []
+
+        for item in dogWeights:
+            weightArray.append(item.weight)
+        
+        return weightArray
+
 ## The serializer that uses the dog's id to post
 class ActivityIDSerializer(serializers.ModelSerializer):
     activities = ActivityListListingField(many=False, queryset=ActivityList.objects.all(), required=False)
@@ -99,6 +125,7 @@ class HeightChangeSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeightChange
         fields = ['id', 'height', 'time', 'dog',]
+
 ## Gets a dog's weight change into an array
 class WeightArraySerializers(serializers.ModelSerializer):
     weight = serializers.SerializerMethodField()

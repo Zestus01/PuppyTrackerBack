@@ -71,6 +71,8 @@ class CustomUser(AbstractUser):
     __all__' pulls in all fields and creates an error for the validation step below
     """
     extra_kwargs = {'password': {'write_only': True}}
+    
+
 
     def create(self, validated_data):
         password = validated_data.pop('password', None)
@@ -99,6 +101,7 @@ class Activity(models.Model):
     amount = models.TextField(max_length=15 ,blank=False)
     description = models.TextField(max_length=300, blank=True)
     time = models.DateTimeField(auto_now_add=True)
+    family = models.TextField(max_length=20, blank=True, default="")
 
     def __str__(self):
         return f"{self.dog} did {self.activities} {self.amount} at {self.time}"
