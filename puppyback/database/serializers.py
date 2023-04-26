@@ -153,3 +153,7 @@ class BreedListSerializer(serializers.ModelSerializer):
             nameArray.append(item.name)
         
         return nameArray
+
+## Objective to get all the needed data in one big object to mess with front end
+class BigDataSerializer(serializers.ModelSerializer):
+    pass
