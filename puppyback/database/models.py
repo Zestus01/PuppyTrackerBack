@@ -17,6 +17,7 @@ class Dog(models.Model):
     weight = models.DecimalField(default=5, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
     height = models.DecimalField(default=23, max_digits=5, decimal_places=2, blank=True, validators=[MinValueValidator(0)])
     breed = models.ManyToManyField('Breed', through='DogBreed', related_name='dog_breed')
+    species = models.ForeignKey('Species', on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         return f"{self.name} ({self.gender})"
@@ -99,9 +100,10 @@ class Activity(models.Model):
     amount = models.TextField(max_length=15 ,blank=False)
     description = models.TextField(max_length=300, blank=True)
     time = models.DateTimeField(auto_now_add=True)
+    member = models.TextField(default="", blank=True, null=True)
 
     def __str__(self):
-        return f"{self.dog} did {self.activities} {self.amount} at {self.time}"
+        return f"{self.dog} did {self.activities} {self.amount} at {self.time} by {self.member}"
     
     class Meta: 
         ordering = ['-time']
@@ -128,3 +130,11 @@ class HeightChange(models.Model):
 
     class Meta:
         ordering = ['time']
+
+class Settings(models.model):
+    user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
+    easy_input = models.BooleanField(default=true, blank=true)
+
+class Species(models.model):
+    type = models.CharField(max_length=14, unique=True)
+    
